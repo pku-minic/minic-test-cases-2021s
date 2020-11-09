@@ -2,7 +2,7 @@
 int main() {
 	int a;
 	int ge, shi, bai;
-	getint(a);
+	a = getint();
 	ge = a % 10;
 	shi = a / 10 % 10;
 	bai = a / 100;

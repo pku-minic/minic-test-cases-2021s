@@ -1,7 +1,7 @@
 int main()
 {
     int i, j, s, n;  
-    getint(n);
+    n = getint();
     i=2;
     while(i<=n)
     {

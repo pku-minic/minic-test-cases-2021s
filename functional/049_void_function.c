@@ -1,6 +1,5 @@
 //test void function
-int a;
-a = 3;
+int a = 3;
 void f(){
     a = 5;
 }
