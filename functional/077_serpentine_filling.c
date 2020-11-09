@@ -1,6 +1,5 @@
 //sample function of Serpentine filling
-int t;
-t = 1;
+int t = 1;
 int a[15][15];
 
 int main() {
