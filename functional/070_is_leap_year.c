@@ -1,6 +1,5 @@
 int year;
 int flag;
-int getint();
 int main()
 {
 	year=getint();
