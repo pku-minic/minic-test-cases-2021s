@@ -1,6 +1,4 @@
 int cnt;
-void putint(int i);
-void putchar(int i);
 void action(int num,int p,int q)
 {
 	

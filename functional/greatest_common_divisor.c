@@ -1,6 +1,3 @@
-int getint();
-void putint(int i);
-void putchar(int i);
 int fun(int m,int n){
 	int rem;			
 	while(n > 0){

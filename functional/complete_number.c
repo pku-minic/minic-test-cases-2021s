@@ -1,6 +1,3 @@
-int getint();
-void putint(int i);
-void putchar(int i);
 int main()
 {
     int i, j, s, n;  

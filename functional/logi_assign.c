@@ -1,6 +1,5 @@
 int a;
 int b;
-int getint();
 int main()
 {
 	a=getint();

@@ -1,6 +1,3 @@
-int getint();
-void putint(int i);
-void putchar(int i);
 int map[10][10];
 int indegree[10];
 int queue[10];

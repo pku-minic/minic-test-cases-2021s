@@ -1,5 +1,4 @@
 int V[200][200]={};
-void putint(int i);
 int KnapSack(int n, int w[], int v[], int x[], int C)
 {
     int i, j;
