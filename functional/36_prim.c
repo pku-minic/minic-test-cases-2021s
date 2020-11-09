@@ -1,5 +1,5 @@
 //sample function of prim
-//Êä³ö1-100µÄËùÓĞËØÊı
+//è¾“å‡º1-100çš„æ‰€æœ‰ç´ æ•°
 int main(){
     int cnt, i, flag;
     cnt = 0;
