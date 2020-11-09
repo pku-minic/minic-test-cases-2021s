@@ -2,7 +2,6 @@ int a;
 int b;
 int c;
 int d;
-int getint();
 int main()
 {
 	a=getint();

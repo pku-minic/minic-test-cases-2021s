@@ -1,7 +1,5 @@
 int m[4]={20,10,5,1};
 int k;
-void putint(int i);
-void putchar(int i);
 
 void greedMoney(int n){
 	int i;

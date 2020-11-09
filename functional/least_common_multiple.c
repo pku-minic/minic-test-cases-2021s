@@ -1,5 +1,3 @@
-int getint();
-void putint(int i);
 int main()
 {
     int m, n, temp, i;

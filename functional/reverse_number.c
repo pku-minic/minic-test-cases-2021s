@@ -1,5 +1,4 @@
-void putint(int i);
-int main (void)
+int main()
 {
 	int x,digit,rev;
 	rev=0;
