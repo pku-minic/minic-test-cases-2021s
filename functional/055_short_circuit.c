@@ -9,13 +9,13 @@ int func(int n) {
 int main() {
   int i;
   i = getint();
-  i = i > 10 && func(i);
+  if (i > 10 && func(i)) i = 1; else i = 0;
   i = getint();
-  i = i > 11 && func(i);
+  if (i > 11 && func(i)) i = 1; else i = 0;
   i = getint();
-  i = i <= 99 || func(i);
+  if (i <= 99 || func(i)) i = 1; else i = 0;
   i = getint();
-  i = i <= 100 || func(i);
-  i = !func(99) && func(100);
+  if (i <= 100 || func(i)) i = 1; else i = 0;
+  if (!func(99) && func(100)) i = 1; else i = 0;
   return 0;
 }
