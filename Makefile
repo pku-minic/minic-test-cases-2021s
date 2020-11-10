@@ -37,7 +37,7 @@ $(BUILD_DIR):
 	-mkdir $@
 
 $(TEST_CASES): $(TEST_SRC_COPY) $(TEST_IN_COPY) $(TEST_OUT) $(DESC_FILE)
-	tar -czvf $@ $^ -C $(BUILD_DIR)
+	tar -czf $@ $^ -C $(BUILD_DIR)
 
 $(DESC_FILE): $(TEST_SRC_COPY) $(TEST_IN_COPY) $(TEST_OUT)
 	$(DESC_GEN) -d $(BUILD_DIR) -f functional -ce ".c" -o $@
@@ -57,10 +57,14 @@ $(BUILD_DIR)/%: $(TOP_DIR)/%.c $(SYSY_LIB)
 $(BUILD_DIR)/%.o: $(LIB_DIR)/%.c
 	$(CC) $^ -o $@ -c
 
-$(BUILD_DIR)/%.out: $(TOP_DIR)/%.in $(BUILD_DIR)/%
+$(BUILD_DIR)/%.out: $(BUILD_DIR)/% $(TOP_DIR)/%.in
 	-mkdir -p $(dir $@)
-	$(BUILD_DIR)/% < $< > $@; echo $$? >> $@
+	$< < $(word 2, $^) > $@.tmp; printf "\n$$?\n" >> $@.tmp
+	awk 'NF' $@.tmp > $@
+	rm $@.tmp
 
 $(BUILD_DIR)/%.out: $(BUILD_DIR)/%
 	-mkdir -p $(dir $@)
-	$^ > $@; echo $$? >> $@
+	$^ > $@.tmp; printf "\n$$?\n" >> $@.tmp
+	awk 'NF' $@.tmp > $@
+	rm $@.tmp
