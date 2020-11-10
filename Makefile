@@ -25,6 +25,10 @@ TEST_IN_COPY := $(patsubst $(TOP_DIR)/%.in, $(BUILD_DIR)/%.in, $(TEST_IN))
 TEST_EXEC := $(patsubst $(TOP_DIR)/%.c, $(BUILD_DIR)/%, $(TEST_SRC))
 TEST_OUT := $(patsubst $(TOP_DIR)/%.c, $(BUILD_DIR)/%.out, $(TEST_SRC))
 DESC_FILE := $(BUILD_DIR)/testcases.json
+TEST_CASE_FILES := $(patsubst $(TOP_DIR)/%.c, %.c, $(TEST_SRC))
+TEST_CASE_FILES += $(patsubst $(TOP_DIR)/%.in, %.in, $(TEST_IN))
+TEST_CASE_FILES += $(patsubst $(TOP_DIR)/%.c, %.out, $(TEST_SRC))
+TEST_CASE_FILES += testcases.json
 TEST_CASES := $(BUILD_DIR)/testcases.tar.gz
 
 
@@ -39,10 +43,10 @@ $(BUILD_DIR):
 	-mkdir $@
 
 $(TEST_CASES): $(TEST_SRC_COPY) $(TEST_IN_COPY) $(TEST_OUT) $(DESC_FILE)
-	tar -czf $@ $^ -C $(BUILD_DIR)
+	tar -czf $@ -C $(BUILD_DIR) $(TEST_CASE_FILES)
 
 $(DESC_FILE): $(TEST_SRC_COPY) $(TEST_IN_COPY) $(TEST_OUT)
-	$(DESC_GEN) -d $(BUILD_DIR) -f functional -ce ".c" -o $@
+	$(DESC_GEN) -d $(BUILD_DIR) -f functional -p performance -ce ".c" -o $@
 
 $(BUILD_DIR)/%.c: $(TOP_DIR)/%.c
 	-mkdir -p $(dir $@)
