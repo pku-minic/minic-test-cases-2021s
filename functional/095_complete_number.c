@@ -19,7 +19,7 @@ int main()
         if(s == i)  
         {
         	putint(i);
-        	putchar(10);
+        	putch(10);
 		}
             
         i=i+1;

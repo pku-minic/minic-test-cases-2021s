@@ -40,7 +40,7 @@ void topo(int n)
 	while(i<n)
 	{
 		putint(queue[i]); 
-		putchar(32);
+		putch(10);
 		i=i+1; 
 	}
 		

@@ -16,7 +16,7 @@ void bubble_sort(int arr[], int len){
         }
 }
 int main() {
-        int arr[] = { 22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70 };
+        int arr[14] = { 22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70 };
         int len;
         len = 14;
         bubble_sort(arr, len);

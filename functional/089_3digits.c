@@ -13,7 +13,7 @@ int main()
                 if (i!=k&&i!=j&&j!=k) {
                     int tmp=100*i+10*j+k;
                     putint(tmp);
-                    putchar(10);
+                    putch(10);
                 }
                 k=k+1;
             }

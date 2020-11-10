@@ -9,11 +9,11 @@ int main()
     	{
     		int tmp=i*j;
     		putint(i);
-    		putchar(42);
+    		putch(42);
     		putint(j);
-			putchar(61);
+			putch(61);
 			putint(tmp);
-			putchar(10);
+			putch(10);
             j=j+1;
         }
         i=i+1;

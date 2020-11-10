@@ -5,7 +5,8 @@ int a[15][15];
 int main() {
 	int n, i, j;
 	n = 4;
-	i = j = 1;//初始位置
+	i = 1;
+    j = 1;//初始位置
 	while (t <= n * n) {//没有遍历完继续
 		while (1) {//向右上走
 			if (i<1 || j>n) {//不出界
@@ -46,7 +47,7 @@ int main() {
         }
 		else{
             if (j == 1){
-                i++;
+                i = i + 1;
             }
         }
 	}

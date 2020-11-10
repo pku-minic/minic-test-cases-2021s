@@ -3,12 +3,12 @@ void action(int num,int p,int q)
 {
 	
 	putint(num);
-	putchar(58);
+	putch(58);
 	putint(p);
-	putchar(45);
-	putchar(62);
+	putch(45);
+	putch(62);
 	putint(q);
-	putchar(10);
+	putch(10);
 	
 	cnt=cnt+1;
 }
