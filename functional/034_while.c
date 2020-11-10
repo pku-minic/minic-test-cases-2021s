@@ -1,7 +1,6 @@
 //test eight while
 int main(){
-    int a, b, c, d, e, f, g, h;
-    a = b = c = d = e = f = g = h = 5;
+    int a = 5, b = 5, c = 5, d = 5, e = 5, f = 5, g = 5, h = 5;
     while(a < 10){
         while(b < 10){
             while(c < 10){

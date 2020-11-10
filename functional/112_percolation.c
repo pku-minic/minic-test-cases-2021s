@@ -25,7 +25,8 @@ int main() {
   int t, m;
   int a, b;
   t = 1;
-  while (t--) {
+  while (t) {
+    t = t - 1;
     n = 4;
     m = 10;
     int i = 0;
@@ -66,7 +67,7 @@ int main() {
           flag = 1;
           int tmp = i + 1;
           putint(tmp);
-          putchar(10);
+          putch(10);
         }
       }
 
@@ -74,7 +75,7 @@ int main() {
     }
     if (!flag) {
       putint(-1);
-      putchar(10);
+      putch(10);
     }
   }
   return 0;

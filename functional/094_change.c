@@ -8,7 +8,7 @@ void greedMoney(int n){
 	{
 		while(n>=m[i]){
 			putint(m[i]);
-			putchar(32);
+			putch(10);
 			n=n-m[i];
 		}
 		i=i+1;
