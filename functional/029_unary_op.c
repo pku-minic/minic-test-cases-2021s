@@ -1,5 +1,11 @@
 int main() {
     int a;
     a = 10;
-    return +-!!!a;
+    if (+-!!!a) {
+        a = - - -1;
+    }
+    else {
+        a = 0;
+    }
+    return a;
 }
