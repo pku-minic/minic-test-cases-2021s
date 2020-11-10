@@ -13,6 +13,7 @@ from math import log10, ceil
 # ========== configurations begin ==========
 test_case_dirs = [
     'functional',
+    'performance',
 ]
 # ==========  configurations end  ==========
 
