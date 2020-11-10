@@ -20,7 +20,7 @@ int power(int a, int b){
 const int maxlen = 2097152;
 int temp[maxlen], a[maxlen], b[maxlen], c[maxlen];
 
-int memmove(int dst[], int dst_pos, int src[], int len){
+int MemMove(int dst[], int dst_pos, int src[], int len){
     int i = 0;
     while (i < len){
         dst[dst_pos + i] = src[i];
@@ -38,7 +38,7 @@ int fft(int arr[], int begin_pos, int n, int w){
         i = i + 1;
     }
 
-    memmove(arr, begin_pos, temp, n);
+    MemMove(arr, begin_pos, temp, n);
     fft(arr, begin_pos, n / 2, multiply(w, w));
     fft(arr, begin_pos + n / 2, n / 2, multiply(w, w));
     i = 0;
