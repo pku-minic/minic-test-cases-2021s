@@ -1,5 +1,4 @@
 //sample function of prim
-//输出1-100的所有素数
 int main(){
     int cnt, i, flag;
     cnt = 0;
