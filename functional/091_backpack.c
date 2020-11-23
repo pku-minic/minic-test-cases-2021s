@@ -2,8 +2,8 @@ int V[200][200]={};
 int KnapSack(int n, int w[], int v[], int x[], int C)
 {
     int i, j;
-    i=0;
-    while(i<n)
+    i=1;
+    while(i<=n)
     {
     	j=0;
     	while(j<C+1)
@@ -30,8 +30,8 @@ int KnapSack(int n, int w[], int v[], int x[], int C)
 	}
     
     j = C;
-    i=n-1;
-    while(i>=0)
+    i=n;
+    while(i>=1)
     {
     	if (V[i][j]>V[i - 1][j])
         {
@@ -45,15 +45,15 @@ int KnapSack(int n, int w[], int v[], int x[], int C)
         } 
         i=i-1;
 	}
-    return V[n - 1][C];
+    return V[n][C];
 }
 
 int main()
 {
     int s;
-    int w[5] = {2,2,6,5,4};
-    int v[5] = {6,3,5,4,6};
-    int x[5];
+    int w[6] = {0,2,2,6,5,4};
+    int v[6] = {0,6,3,5,4,6};
+    int x[6];
     int n = 5;
     int C=10;
     s = KnapSack(n, w, v, x, C);
